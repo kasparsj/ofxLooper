@@ -5,7 +5,7 @@
 
 class ofxLooper {
 public:
-    void setup(int width, int height, int fps = 30);
+    void setup(float maxDuration = 10, int fps = 30, float playSpeed = 2.0, int bytesRate = 2000000 * 40);
     void swapBuffers(bool swapBuffers = false);
     void addFrame(ofPixels& pixels);
     void update();
@@ -53,9 +53,9 @@ private:
     
     int fps;
     int recFps;
-    float playSpeed = 2.0;
+    float playSpeed;
     float loopStartTime = 0;
-    float maxDuration = 10;
+    float maxDuration;
     
     FramesBuffer framesBuffer1;
     FramesBuffer framesBuffer2;

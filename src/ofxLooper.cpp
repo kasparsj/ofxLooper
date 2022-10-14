@@ -1,21 +1,21 @@
 #include "ofxLooper.h"
 #include "ofGraphics.h"
 
-void ofxLooper::setup(int width, int height, int fps) {
+void ofxLooper::setup(float maxDuration, int fps, float playSpeed, int bytesRate) {
+    setMaxDuration(maxDuration);
     setFps(fps);
+    setPlaySpeed(playSpeed);
     
     framesBuffer1.setLoop(true);
     framesBuffer1.setCurrentFPS(recFps);
-    framesBuffer1.setCurrentBytesRate(2000000 * 40);
+    framesBuffer1.setCurrentBytesRate(bytesRate);
 
     framesBuffer2.setLoop(true);
     framesBuffer2.setCurrentFPS(recFps);
-    framesBuffer2.setCurrentBytesRate(2000000 * 40);
+    framesBuffer2.setCurrentBytesRate(bytesRate);
     
     recBuffer = &framesBuffer1;
     playBuffer = &framesBuffer2;
-    
-    fbo.allocate(width, height);
 }
 
 void ofxLooper::swapBuffers(bool force) {
@@ -35,6 +35,9 @@ void ofxLooper::swapBuffers(bool force) {
 }
 
 void ofxLooper::addFrame(ofPixels& pixels) {
+    if (!fbo.isAllocated()) {
+        fbo.allocate(pixels.getWidth(), pixels.getHeight());
+    }
     float speed = (fps / recFps);
     if (!recBuffer->addFrame(pixels, (ofGetElapsedTimef() - loopStartTime) / speed)) {
         ofLog() << "not enough memory";

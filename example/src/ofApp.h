@@ -3,7 +3,7 @@
 #include "ofMain.h"
 #include "ofxOsc.h"
 #include "ofxPostGlitch.h"
-#include "Looper.h"
+#include "ofxLooper.h"
 
 #define PORT 12345
 
@@ -30,7 +30,7 @@ public:
     ofVideoGrabber vidGrabber;
     int camWidth;
     int camHeight;
-    Looper looper;
+    ofxLooper looper;
     
     ofxOscReceiver receiver;
     

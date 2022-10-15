@@ -1,3 +1,6 @@
+/// Written by: https://forum.openframeworks.cc/u/lilive
+/// Downloaded from: https://forum.openframeworks.cc/t/live-sampling-video-grabber/35655
+
 #pragma once
 #include <deque>
 #include "ofImage.h"

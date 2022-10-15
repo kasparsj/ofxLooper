@@ -2,6 +2,5 @@
 
 ## FramesBuffer
 
-This addone is based on FramesBuffer written by: https://forum.openframeworks.cc/u/lilive
-
+This addone is based on FramesBuffer from:
 https://forum.openframeworks.cc/t/live-sampling-video-grabber/35655

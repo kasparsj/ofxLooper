@@ -21,7 +21,7 @@ void ofApp::setup(){
     ofSetFrameRate(60);
     ofSetVerticalSync(true);
 
-    looper.setup(camWidth, camHeight, 30);
+    looper.setup(2, 30, 2.0);
     
     receiver.setup(PORT);
     

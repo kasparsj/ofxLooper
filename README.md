@@ -7,7 +7,7 @@ Once the recording buffer is filled, it swaps it with the play buffer.
 
 See (example)[https://github.com/kasparsj/ofxLooper/tree/main/example].
 
-```
+```cpp
 void ofApp::setup(){
     int fps = 60;
     ofSetFrameRate(fps);

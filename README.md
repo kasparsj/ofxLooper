@@ -36,7 +36,9 @@ void ofApp::draw() {
 }
 
 ofPixels& ofApp::getPixels() {
-  // todo: implement get & return your pixels from Webcam or video or etc.
+  // todo: implement get & return your pixels from Webcam or video, or etc. e.g.:
+  // vidGrabber.update();
+  // vidGrabber.getPixels();
 }
 ```
 

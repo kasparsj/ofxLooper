@@ -1,7 +1,7 @@
 # ofxLooper
 
 ofxLooper is a frames buffer that can play and record at the same time. 
-Once the recording buffer is filled, it swaps it with the play buffer.
+Once the recording buffer is filled, it is swapped with the play buffer.
 
 ## Usage
 

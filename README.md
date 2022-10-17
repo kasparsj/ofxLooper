@@ -5,7 +5,7 @@ Once the recording buffer is filled, it swaps it with the play buffer.
 
 ## Usage
 
-See (example)[https://github.com/kasparsj/ofxLooper/tree/main/example].
+See [example](https://github.com/kasparsj/ofxLooper/tree/main/example).
 
 ```cpp
 void ofApp::setup(){
